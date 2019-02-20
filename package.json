@@ -1,0 +1,23 @@
+{
+    "name": "hltv-parser",
+    "version": "1.0.0",
+    "contributors": [],
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "bootstrap": "^3.4.0",
+        "font-awesome": "^4.7.0",
+        "jquery": "^3.3.1",
+        "merge-stream": "^1.0.1"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.0",
+        "gulp-csso": "^3.0.1",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-watch": "^5.0.1"
+    },
+    "scripts": {
+        "postinstall": "find node_modules -type f -exec touch {} \\;"
+    }
+}

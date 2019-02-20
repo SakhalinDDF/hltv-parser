@@ -1,0 +1,9 @@
+.DS_Store
+/.idea
+/.env
+/vendor
+/node_modules
+*.local.php
+backup*.tag.gz
+backup*.sql
+TestController.php

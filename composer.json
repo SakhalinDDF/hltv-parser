@@ -1,0 +1,70 @@
+{
+    "authors":           [
+        {
+            "name":  "Vorobyev Andrey",
+            "email": "73.vorobyev@gmail.com",
+            "role":  "Developer"
+        }
+    ],
+    "autoload":          {
+        "psr-4": {
+            "api\\":      "frontend/modules/api/",
+            "common\\":   "common/",
+            "console\\":  "console/",
+            "frontend\\": "frontend/"
+        }
+    },
+    "config":            {
+        "process-timeout": 1800,
+        "fxp-asset":       {
+            "installer-paths": {
+                "npm-asset-library":   "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        }
+    },
+    "description":       "",
+    "extra":             {
+        "yii\\composer\\Installer::postInstall": {
+            "copyFiles":                   [
+                {
+                    ".env.dist":                        ".env",
+                    "common/config/main.default.php":   "common/config/main.local.php",
+                    "frontend/config/main.default.php": "frontend/config/main.local.php"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "frontend/config/main.local.php"
+            ]
+        }
+    },
+    "license":           "proprietary",
+    "minimum-stability": "stable",
+    "name":              "hltv/parser",
+    "type":              "project",
+    "require":           {
+        "php":                  ">=7.2.0",
+        "ext-curl":             "*",
+        "ext-fileinfo":         "*",
+        "ext-json":             "*",
+        "ext-iconv":            "*",
+        "ext-intl":             "*",
+        "ext-mbstring":         "*",
+        "ext-pdo":              "*",
+        "ext-mysqli":           "*",
+        "yiisoft/yii2":         "^2.0",
+        "vlucas/phpdotenv":     "^2.5",
+        "symfony/dom-crawler":  "^4.2",
+        "symfony/css-selector": "^4.2"
+    },
+    "require-dev":       {
+        "yiisoft/yii2-debug": "^2.0",
+        "yiisoft/yii2-gii":   "^2.0",
+        "yiisoft/yii2-faker": "^2.0"
+    },
+    "scripts":           {
+        "post-install-cmd": [
+            "yii\\composer\\Installer::postInstall"
+        ]
+    }
+}
