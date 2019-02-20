@@ -6,5 +6,5 @@
 - Run **./yii migrate** for update database schema to working state
 
 # Running web application
-- Run **./yii serve localhost:8080** and open browser on current url to access web application
-- Generate nginx configuration via **bin/generate-nginx-host.sh** bash script and use application with standalone webserver
+1. Run **./yii serve localhost:8080** and open browser on current url to access web application
+2. Or you can use standalone webserver nginx, for generate template of virtual host configuration file use **bin/generate-nginx-host.sh** bash script
