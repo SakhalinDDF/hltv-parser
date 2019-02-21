@@ -1,7 +1,7 @@
 # Install steps
 
 - Run **composer install** in project root
-- Run **yarn** or **npm install** in project root
+- Run **yarn --production** or **npm install --production** in project root
 - Update **.env** file with local environment variables
 - Run **./yii migrate** for update database schema to working state
 
